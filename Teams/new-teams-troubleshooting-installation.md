@@ -102,7 +102,11 @@ The following list of policies can block users from seeing the app switcher togg
    - If false, you didn’t the settings from MSFT yet or need an app relaunch (see below for steps to relaunch the app) 
 1. Check **isAboveWin10Vibranium**.
    - If true, the OS version is >= what is needed for app switcher  
-   - If false, the OS is older than what we support. 
+   - If false, the OS is older than what we support.
+     - Check if Teams client or the udpate.exe process is running in compatibility mode check the values from the regkey and restart the client.
+       "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers "
+       "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"
+
 1. Check the code to find out the cause.
 
 |Code|Meaning|
